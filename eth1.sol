@@ -4,7 +4,7 @@ pragma solidity ^0.8.17;
 contract FileHandling{
    
     // uint public num = 0;
-    uint b=5;
+    uint j=5;
 
     function testAssert(uint num) public pure{
         assert(num!=0);
@@ -20,9 +20,9 @@ contract FileHandling{
        
 
     }
-    function mult(uint a) public view returns (uint){
-        require(a>0,"Value of a is zero , we don't want the result to be zero");
-        return a*b;
+    function mult(uint k) public view returns (uint){
+        require(k>0,"Value of k is zero , we don't want the result to be zero");
+        return j*k;
 
     }
 
