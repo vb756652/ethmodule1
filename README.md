@@ -1,24 +1,51 @@
-Degen Gaming Token
+#   Updated ErrorHandling Contract
 
-Degen Gaming Token is an ERC20 token deployed on the Avalanche blockchain. This token is designed to enhance the gaming experience within the Degen Gaming platform by allowing players to earn and exchange tokens for in-game rewards and items.
+This is a Solidity smart contract that demonstrates different error handling techniques using `assert`, `revert`, and `require` functions.
 
-Description The DegenToken contract is an ERC20 token smart contract that enables various functionalities for players in the Degen Gaming platform
+## License
 
-Deployment For transaction you will need AVAX as gas fees are need. The Degen Gaming Token contract has been deployed on the Avalanche network. The contract address is Your deployed contract address.
+This contract is using the MIT License.
 
-Interacting with the Contract Go to https://remix.ethereum.org/
+## Prerequisites
 
-Load the contract in the workspace and compile it in compile section of remix ide.
+- Solidity ^0.8.17
 
-In the Deploy and Run Transactions section of Remix IDE, in the environments section select injected provider.
+## Contract Details
 
-Note: make sure your wallet is connected to the Avalanche testnet fuji and remix IDE.
+The `updatedErrorHandling` contract provides the following functions:
 
-Your accounts in your wallet will be available in account option and you can switch between accounts.
+### `(uint num)`
 
-You can Deploy your contract by clicking on deploy option or copying address from https://testnet.snowtrace.io/ and paste it in AtAddress block.
+- This function demonstrates the usage of the `checkNonZero` function.
+- It takes a `num` parameter and checks if it is not equal to zero using the `assert` statement.
+- If the condition fails, it triggers an "Internal error" and aborts the execution.
 
-You can interact with functions by providing the argument and clicking on transact.
+### `safedivision(uint _numerator, uint _denominator)`
+
+- This function demonstrates the usage of the `revert` function.
+- It takes `_numerator` and `_denominator` parameters and performs division.
+- If the `_numerator` is less than `_denominator`, it reverts the transaction with a custom error message stating that the numerator should be greater than the denominator.
+- If the condition is met, it returns the result of the division.
+
+### `mult(uint a)`
+
+- This function demonstrates the usage of the `require` function.
+- It takes an `a` parameter and performs multiplication with a predefined constant `b`.
+- It first checks if `a` is greater than zero using the `require` statement.
+- If the condition fails, it reverts the transaction with a custom error message stating that the value of `a` should not be zero.
+- If the condition is met, it returns the result of the multiplication.
+
+## Usage
+
+1. Make sure you have Solidity ^0.8.17 installed.
+2. Compile and deploy the `UpdatedErrorHandling` contract to a supported Ethereum network.
+3. Interact with the deployed contract by calling the available functions and providing the required parameters.
+
+
+
+
+Feel free to explore and modify the contract according to your needs!
+
 
 Authors
 
