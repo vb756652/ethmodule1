@@ -1,6 +1,6 @@
 #   Updated ErrorHandling Contract
 
-This is a Solidity smart contract that demonstrates different error handling techniques using `assert`, `revert`, and `require` functions.
+This is a Solidity smart contract that demonstrates different error handling techniques using  functions.
 
 ## License
 
@@ -17,21 +17,21 @@ The `updatedErrorHandling` contract provides the following functions:
 ### `(uint num)`
 
 - This function demonstrates the usage of the `checkNonZero` function.
-- It takes a `num` parameter and checks if it is not equal to zero using the `assert` statement.
+- It takes a `num` parameter and checks if it is not equal to zero using the  statement.
 - If the condition fails, it triggers an "Internal error" and aborts the execution.
 
 ### `safedivision(uint _numerator, uint _denominator)`
 
-- This function demonstrates the usage of the `revert` function.
+- This function demonstrates the usage of the  function.
 - It takes `_numerator` and `_denominator` parameters and performs division.
 - If the `_numerator` is less than `_denominator`, it reverts the transaction with a custom error message stating that the numerator should be greater than the denominator.
 - If the condition is met, it returns the result of the division.
 
 ### `mult(uint a)`
 
-- This function demonstrates the usage of the `require` function.
+- This function demonstrates the usage of the  function.
 - It takes an `a` parameter and performs multiplication with a predefined constant `b`.
-- It first checks if `a` is greater than zero using the `require` statement.
+- It first checks if `a` is greater than zero using the  statement.
 - If the condition fails, it reverts the transaction with a custom error message stating that the value of `a` should not be zero.
 - If the condition is met, it returns the result of the multiplication.
 
